@@ -27,7 +27,5 @@ function getResult(base, data) {
     }, {});
     let dataToDecimal = data.split('');
     dataToDecimal = dataToDecimal.map( data => values[data]);
-    console.log(dataToDecimal.join(''))
-    console.log(values)
     return parseInt(dataToDecimal.join(''), Object.keys(values).length);
 }

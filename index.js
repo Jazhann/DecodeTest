@@ -20,15 +20,15 @@ function decode(data) {
   saveCsv(result);
   }
   
-  function getResult(base, data) {
-    let values = base.split('');
-    values = values.reduce( (acc, value, index) => {
-      acc[value] = index;
-      return acc;
-    }, {});
-    let dataToDecimal = data.split('');
-    dataToDecimal = dataToDecimal.map( data => values[data]);
-    return parseInt(dataToDecimal.join(''), Object.keys(values).length);
+function getResult(base, data) {
+  let values = base.split('');
+  values = values.reduce( (acc, value, index) => {
+    acc[value] = index;
+    return acc;
+  }, {});
+  let dataToDecimal = data.split('');
+  dataToDecimal = dataToDecimal.map( data => values[data]);
+  return parseInt(dataToDecimal.join(''), Object.keys(values).length);
 }
 
 function saveCsv(data) {
